@@ -253,7 +253,7 @@ section{
     justify-content: center;
     align-items:center;
     gap:20px 10px;
-
+    box-sizing: border-box;
  
 }
 
@@ -634,6 +634,18 @@ section{
    }
    .products1-info{
     font-size: 15px;
+   }
+
+
+   .cards-Contact .title{
+    font-size: 34px;
+   }
+   .cards-Contact .form{
+    display: flex;
+    flex-direction: column;
+   }
+   .cards-Contact .form .e{
+    width: 260px;
    }
    
 }
