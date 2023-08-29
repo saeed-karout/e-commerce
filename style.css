@@ -643,9 +643,16 @@ section{
    .cards-Contact .form{
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
    }
+
+   .cards-Contact .form .d{
+    width: 189px;
+   }
+
    .cards-Contact .form .e{
     width: 260px;
+    
    }
    
 }
