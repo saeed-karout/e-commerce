@@ -55,6 +55,7 @@ nav .nav-logo .logo{
 }
 .main .sociale-icons a i,.footer .sociale-icons a i{
     animation: anim-icon 3s 5s  cubic-bezier(1, -0.25, 0.08, 1.25) infinite ; 
+   
 }
 
 
@@ -136,8 +137,28 @@ nav ul li,a{
     .main .sociale-icons a{
         animation: anim-icon 3s 5s  cubic-bezier(1, -0.25, 0.08, 1.25) infinite ; 
     }
-    #check:checked ~ ul li a{
+    #check:checked ~ ul{
         left: 0;
+    }
+    .products .content{
+        margin-top: 30px;
+       
+    }
+}
+
+
+@media(min-width:1200px){
+    .products .content{
+        margin-left: 80px;
+        width: 960px;
+    }
+    .main{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .main .images-trende img{
+        width: 450px;
     }
 }
 
@@ -182,7 +203,7 @@ section{
     justify-content: center;
     align-items: center;
 }
-.main h2 .message .word1 p{
+/* .main h2 .message .word1 p{
     background-color:#b8a3a3;
     color: #333;
     display: flex;
@@ -197,7 +218,7 @@ section{
     border-radius: 20%;
  justify-content: center;
     animation: openclose 10s 2s ease-in-out infinite;
-}
+} */
 .main h3{
     color: mediumpurple;
     font-size: 2em;
@@ -266,6 +287,7 @@ section{
     grid-area: name;
     grid-column: 1/2;
     grid-row: 1/2;
+    width: 300px;
     
 }
 
@@ -273,26 +295,34 @@ section{
     grid-area: email;
     grid-column: 2/3;
     grid-row: 1/2;
+    width: 300px;
+
     
 }
 .cards-Contact .form .c{
     grid-area: phone;
     grid-column: 1/2;
+
     grid-row: 2/3;
+    width: 300px;
+
 }
 .cards-Contact .form .d{
     grid-area: gender;
     grid-column: 2/3;
     grid-row: 2/3;
+    width: 300px;
   
 }
 .cards-Contact .form .e{
     grid-area: message;
     grid-column: 1/3;
     grid-row: 3/4;
+    width: 610px;
+
 }
 .cards-Contact .form .f{
-    grid-area: send;
+    grid-area: send;    
     margin-bottom: 50px;
     grid-column: 1/3;
     grid-row: 4/5;
@@ -300,6 +330,7 @@ section{
     font-weight: 900;
     color: #6384ff;
     border: 1px solid #6384ff;
+    width: 610px;
   
 }
 .cards-Contact .form input:hover,.cards-Contact .form select:hover,.cards-Contact .form textarea:hover{
@@ -438,9 +469,11 @@ section{
 }
 .products{
     background-color: rgb(178, 160, 199);
+  
 }
 .products .content{
     margin-top: 30px;
+
 }
 
 
@@ -449,7 +482,7 @@ section{
     background-color: #fff;
     border: 1px solid #fff;
     min-height: 14em;
-    width: 23em;
+    width: 16em;
     overflow: hidden;
     border-radius: 10px;
     margin: 20px;
@@ -489,7 +522,7 @@ section{
 .products .content .products-card .products1-info .products-title{
     display: flex;
     align-items: center;
-    font-size: 18px;
+    font-size: 10px;
     justify-content: space-around;
 }
 .products .content .products-card .products1-info .products-title span i{
@@ -592,7 +625,7 @@ section{
     .main .images-trende img{
         width: 400px;
     }
-    
+   
 }
 
 
@@ -646,14 +679,17 @@ section{
     flex-wrap: wrap;
    }
 
-   .cards-Contact .form .d{
+   .cards-Contact .form .e{
     width: 189px;
    }
 
-   .cards-Contact .form .e{
+  
+   .cards-Contact .form .f{
     width: 260px;
     
    }
+
+   
    
 }
 
@@ -807,4 +843,39 @@ section{
     color: #fff;
     font-weight: 900;
     font-size: 25px;
+}
+
+
+
+
+/* typewriter */
+
+
+.main .message .word1  .line-1{
+    position: relative;
+   display: inline-block;
+   color: #B2A0C7;
+    width: 6em;
+    margin: 0 auto;
+    top: 22px;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 30px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 1s steps(10) 3s  alternate  infinite,
+             blinkTextCursor 1000ms steps(10) infinite alternate ;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 6em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
 }
